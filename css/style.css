@@ -1,0 +1,44 @@
+html, body, {font-family: 'M PLUS 1p', sans-serif;}
+h1, h2, h3, h4, h5, h6{font-family: 'M PLUS 1p', sans-serif; font-weight: 900;}
+.magazine__wrap{max-height: 700px;transition: opacity 1s ease-out, transform 0.75s ease-out;
+    -moz-transition-delay: 0.25s;
+    -webkit-transition-delay: 0.25s;
+    -ms-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+    cursor: default;
+    position: relative;
+    height: 32rem;
+
+}
+.logo-brand{height: 90px;}
+.page__border{height: auto;}
+.page__border a{display: block;width:fit-content;cursor:zoom-in;
+    -webkit-box-shadow: 0px 8px 10px 3px rgba(34, 60, 80, 0.25);
+    -moz-box-shadow: 0px 8px 10px 3px rgba(34, 60, 80, 0.25); box-shadow: 0px 8px 10px 3px rgba(34, 60, 80, 0.25);margin: 0 auto;}
+
+    .carousel-control-prev, .carousel-control-next{background: #7ab7d6;width: 7%;height: 100px;top:49%;}
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+color: #7ab7d6;
+}
+
+@media (max-width: 1600px) {
+    .logo-brand{width:77px;}
+}
+@media (max-width: 1200px) {
+    .page__border img{height:600px;}  
+    .carousel-control-prev, .carousel-control-next { height: 70px;} 
+    .logo-brand{width:60px;}
+    hr {
+        margin: 0;}
+        .magazine__title{margin-bottom: 0;}
+}
+@media (max-width: 576px) {
+    .page__border{margin-top: calc( 50vh - 325px);}
+    .page__border img{width:100%;height: auto;}  
+    .carousel-control-prev, .carousel-control-next { height: 50px;} 
+    .logo-brand{width:40px;}
+    hr {
+        margin: 0;}
+        .magazine__title{margin-bottom: 0;}
+}
+
