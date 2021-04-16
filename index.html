@@ -9,10 +9,19 @@
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;900&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" rel="stylesheet">   
-    <link href="css/style.css" rel="stylesheet">   
+    <link href="css/style.css" rel="stylesheet">  
+    <style>.after_load{display: none;}
+      #loadPage{width:100%;height: 100vh;display: flex; align-items: center; justify-content: center;}</style> 
 </head>
 <body>
-    <div class="container mt-3">
+  <div id="loadPage">
+    
+    <div class="spinner-border text-info" role="status">
+      <span class="visually-hidden">Loading...</span>
+
+  </div>
+</div>
+    <div class="container mt-3 after_load" id="afteLoad">
         <h1 class="text-uppercase text-secondary magazine__title"> <img src="img/deh-logo.svg" alt="Deholding life magazine" class="logo-brand"> Deholding life #1</h1>
         <hr>
         <div class="magazine__wrap">
@@ -21,7 +30,7 @@
                   <div class="carousel-item p-3 active">
                     <div class="page__border">
                         <a href="magazine/page_1.jpg" data-fancybox>
-                            <img src="magazine/thumbs/page_1.jpg" />
+                            <img src="magazine/thumbs/page_1.jpg"  />
                         </a>
                     </div>
                   </div>
@@ -35,7 +44,14 @@
                   <div class="carousel-item p-3">
                     <div class="page__border">
                         <a href="magazine/page_3.jpg" data-fancybox>
-                            <img src="magazine/thumbs/page_3.jpg" />
+                            <img src="magazine/thumbs/page_3.jpg"/>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="carousel-item p-3">
+                    <div class="page__border">
+                        <a href="magazine/page_4.jpg" data-fancybox>
+                            <img src="magazine/thumbs/page_4.jpg"/>
                         </a>
                     </div>
                   </div>
@@ -59,6 +75,11 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
+$(window).on('load', function() {
+  console.log('hello');
+  $('#loadPage').toggle();
+  $('#afteLoad').removeClass('after_load');
+});
     var myCarousel = document.querySelector('#carouselMagaz')
 var carousel = new bootstrap.Carousel(myCarousel, {
   interval: false,
